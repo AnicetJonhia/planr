@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .core.database import engine, Base
-from .api import auth, projects, tasks
+from .routers import auth, projects, tasks
 from .core.config import settings
 
 # Créer les tables
