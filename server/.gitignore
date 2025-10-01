@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual env
+.venv/
+venv/
+ENV/
+
+# Logs
+*.log
+
+# Configs / secrets
+.env
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# Byte-compiled / cache
+.mypy_cache/
+.pytest_cache/
+coverage/
+

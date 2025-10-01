@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./projectpro.db
+      - SECRET_KEY=your-secret-key-change-in-production
+      - FRONTEND_URL=http://localhost:3000
+    volumes:
+      - .:/app
+      - ./projectpro.db:/app/projectpro.db
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Optionnel: PostgreSQL pour la production
+  # db:
+  #   image: postgres:15
+  #   environment:
+  #     POSTGRES_DB: projectpro_db
+  #     POSTGRES_USER: projectpro
+  #     POSTGRES_PASSWORD: password
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+
+# volumes:
+#   postgres_data:
