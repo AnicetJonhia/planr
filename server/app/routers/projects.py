@@ -5,7 +5,7 @@ from ..core.database import get_db
 from ..models.project import Project
 from ..models.user import User
 from ..schemas.project import Project as ProjectSchema, ProjectCreate, ProjectUpdate
-from .auth import get_current_user
+from ..crud.auth import get_current_user
 
 router = APIRouter()
 

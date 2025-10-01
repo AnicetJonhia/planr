@@ -6,7 +6,7 @@ from ..models.task import Task
 from ..models.project import Project
 from ..models.user import User
 from ..schemas.task import Task as TaskSchema, TaskCreate, TaskUpdate
-from .auth import get_current_user
+from ..crud.auth import get_current_user
 
 router = APIRouter()
 
