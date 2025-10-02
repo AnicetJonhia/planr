@@ -26,3 +26,6 @@ ENV/
 .pytest_cache/
 coverage/
 
+
+*.db
+
